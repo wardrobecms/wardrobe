@@ -11,5 +11,11 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
+mix
+    .js('resources/js/app.js', 'public/js')
+    .sass('resources/sass/app.scss', 'public/css')
+
+    // Admin
+    .copy('resources/js/admin', 'public/assets/js')
+    .sass('resources/sass/admin/bundle.scss', 'public/css')
+;
