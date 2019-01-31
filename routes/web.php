@@ -20,7 +20,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::prefix('admin')->namespace('Admin')->group(function () {
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
-    Route::get('dashboard', 'AdminController@index')->name('admin.dashboard');
     Route::get('register', 'AdminController@create')->name('admin.register');
     Route::post('register', 'AdminController@store')->name('admin.register.store');
     Route::get('login', 'Auth\LoginController@login')->name('admin.auth.login');
